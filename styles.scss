@@ -1,0 +1,58 @@
+body,html{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    #canvas{
+        width: 60vw;
+        height: 60vh;
+        position: relative;
+        border: 2px solid #000;
+
+        .stick{
+            position: absolute;
+            height: 5px;
+            width: 10vw;
+            bottom: 5vh;
+            left: calc((100% - 10vw) / 2);
+            border-radius: 2px;
+            background-color: #000;
+        }
+
+        .ball{
+            position: absolute;
+            width: 1vw;
+            height: 1vw;
+            left: calc((100% - 1vw) / 2);
+            bottom: calc(5vh + 5px);
+            border-radius: 2.5vw;
+            z-index: 3;
+            background-color: rgb(135, 0, 168);
+        }
+
+        .direction{
+            position: absolute;
+            bottom: calc(5vh + 5px + 0.5vw);
+            height: 5vh;
+            z-index: 2;
+            width: 2px;
+            background-color: #000;
+            left: calc((100% - 2px) / 2);
+        }
+    }
+}
+
+.brick{
+    width: 4vw;
+    height: 3vh;
+    background-color: black;
+    position: absolute
+}
